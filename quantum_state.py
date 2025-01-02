@@ -45,7 +45,7 @@ class QuantumState:
 
     def observe(self, user_input: str) -> Optional[str]:
         msg = self.llm_generate(user_input)
-        print(f"llm msg:\n {msg}")
+        # print(f"llm msg:\n {msg}")
         return extract_code(msg)
 
     def wave_function(self, x):
@@ -63,7 +63,7 @@ class QuantumState:
             if code is None:
                 return None
 
-            print("executing:\n" + code)
+            # print("executing:\n" + code)
 
             namespace = {}
             exec(code, namespace)
