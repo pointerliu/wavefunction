@@ -1,3 +1,5 @@
+import math
+
 from quantum_state import QuantumState
 from dotenv import load_dotenv
 
@@ -11,5 +13,7 @@ if __name__ == '__main__':
         """
     )
 
-    result = wf.wave_function(x=1)
-    print(result)
+    t = 1
+    for epoch in range(10):
+        t = wf.wave_function(x=t)
+        print(t)
